@@ -1,0 +1,32 @@
+.howTo {
+    &-item {
+        background-color: $dark-bg;
+        padding: 30px;
+        border-radius: 8px;
+        @include lg {
+            padding: 24px;
+        }
+        @include mmd {
+            padding: 20px;
+        }
+        & p {
+            margin-bottom: 60px;
+            @include lg {
+                margin-bottom: 40px;
+            }
+            @include md {
+                margin-bottom: 30px;
+            }
+            @include sm {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &-count {
+        --width: 34px;
+        width: var(--width);
+        height: var(--width);
+        border-radius: 4px;
+        font-family: $font-2;
+    }
+}

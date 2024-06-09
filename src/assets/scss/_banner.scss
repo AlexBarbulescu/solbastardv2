@@ -1,0 +1,122 @@
+.banner {
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-position: top center;
+    background-image: url(../img/banner-bg.png);
+    padding-top: var(--pt, 270px);
+    padding-bottom: var(--pb, 180px);
+    @include xl {
+        --pt: 230px;
+        --pb: 140px;
+    }
+    @include xl {
+        --pt: 220px;
+        --pb: 100px;
+    }
+    @include lg {
+        --pt: 200px;
+        --pb: 100px;
+    }
+    @include md {
+        --pt: 180px;
+        --pb: 80px;
+    }
+    @include sm {
+        --pt: 150px;
+        --pb: 70px;
+    }
+    &-content {
+        @include sm {
+            text-align: center;
+            max-width: 90%;
+            margin-inline: auto;
+        }
+        h1 {
+            color: $white;
+            text-shadow: 4px 4px 0px #000;
+            @include font-100;
+            line-height: 110%;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #E0DBDB;
+            @include font-22;
+            font-weight: 400;
+            line-height: 150%;
+            text-transform: uppercase;
+            @include lg {
+                font-size: 20px;
+            }
+            @include sm {
+                color: #fff;
+            }
+        }
+    }
+    &-img {
+        position: relative;
+        z-index: 1;
+        padding: 35px;
+        @media (min-width: 1200px) {
+            margin-left: 8%;
+        }
+        @include lg {
+            padding: 30px;
+        }
+        @include md {
+            padding: 26px;
+            width: 90%;
+            margin-left: auto;
+        }
+        @include sm {
+            width: 86%;
+            margin-inline: auto;
+            padding: 27px;
+        }
+    }
+    &-bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        animation: rotated 15s linear infinite;
+    }
+    &-video {
+        width: 100%;
+        padding-bottom: 58%;
+        margin-bottom: 60px;
+        --bs-border-opacity: .5;
+        @include lg {
+            margin-bottom: 44px;
+        }
+        @include md {
+            margin-bottom: 34px;
+        }
+        @include sm {
+            margin-bottom: 24px;
+        }
+        & video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    & h4 {
+        --text-shadow: 2px;
+        text-shadow: var(--text-shadow) var(--text-shadow) 0px #000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--Dark, #222120);
+    }
+}
+
+@keyframes rotated {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

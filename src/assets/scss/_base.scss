@@ -1,0 +1,174 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-2;
+    color: $white;
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.common {
+    &-row {
+        --bs-gutter-x: 32px;
+        margin-bottom: calc(var(--bs-gutter-x) * -1);
+        @include lg {
+            --bs-gutter-x: 24px;
+        }
+        @include mmd {
+            --bs-gutter-x: 20px;
+        }
+        &>div {
+            margin-bottom: var(--bs-gutter-x);
+        }
+    }
+    &-padding {
+        --padding-y: 240px;
+        --padding-x: 0;
+        padding: var(--padding-y) var(--padding-x);
+        @include xl {
+            --padding-y: 200px;
+        }
+        @include lg {
+            --padding-y: 180px;
+        }
+        @include md {
+            --padding-y: 150px;
+        }
+        @include sm {
+            --padding-y: 80px;
+        }
+    }
+    &-title {
+        margin-bottom: 80px;
+        @include md {
+            margin-bottom: 60px;
+        }
+        @include sm {
+            margin-bottom: 40px;
+        }
+        & h2 {
+            @include font-80;
+            text-shadow: 4px 4px 0px #000;
+        }
+        & p {
+            @include font-22;
+        }
+    }
+}
+
+.base-btn {
+    border-radius: 50px;
+    background-color: $primary;
+    border: 1px solid $primary;
+    padding: 15px 32px;
+    box-shadow: 4px 4px 0px 0px #000;
+    color: $white;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+        color: $primary;
+        border-color: $primary;
+        background-color: transparent;
+    }
+    @include sm {
+        padding: 12px 22px;
+        box-shadow: 3px 3px 0px 0px #000;
+        font-size: 18px;
+    }
+}
+
+// social 
+.social {
+    &-link {
+        --width: 48px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $primary;
+        color: $white;
+        border: 1px solid $primary;
+        font-size: 20px;
+        @include sm {
+            --width: 42px;
+        }
+        &:hover {
+            background-color: transparent;
+        }
+        .heading &,
+        .banner & {
+            box-shadow: 4px 4px $black;
+        }
+        .banner & {
+            --width: 65px;
+            @include sm {
+                --width: 53px;
+            }
+        }
+    }
+}
+
+#root {
+    overflow: hidden;
+}

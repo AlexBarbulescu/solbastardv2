@@ -1,0 +1,32 @@
+.cta {
+    padding-bottom: var(--pb, 200px);
+    @include lg {
+        --pb: 170px;
+    }
+    @include md {
+        --pb: 140px;
+    }
+    @include sm {
+        --pb: 100px;
+    }
+    &-wrap {
+        border-radius: 16px;
+        background: var(--liniar, linear-gradient(0deg, #050000 -10.68%, #383C4E 126.12%));
+        padding: 70px 20%;
+        @include md {
+            padding: 50px 10%;
+        }
+        @include sm {
+            padding: 40px;
+        }
+        & h3 {
+            @include font-80;
+        }
+        & p {
+            @include font-20
+        }
+        & a {
+            gap: 10px;
+        }
+    }
+}

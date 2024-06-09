@@ -1,0 +1,21 @@
+.footer {
+    --pb: 60px;
+    padding-top: var(--pb);
+    background: linear-gradient(0deg, #050000 26.92%, #383C4E 107.6%);
+    @include mmd {
+        --pb: 40px;
+    }
+    &-wrap {
+        & p {
+            @include font-20;
+        }
+    }
+    &-copy {
+        margin-top: var(--pb);
+        padding: 30px 0;
+        border-top: 1px solid #2D303D;
+        @include mmd {
+            padding: 24px 0;
+        }
+    }
+}

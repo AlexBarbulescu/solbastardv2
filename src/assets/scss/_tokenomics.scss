@@ -1,0 +1,63 @@
+.tokenomics {
+    & .common {
+        &-row {
+            --bs-gutter-x: 16px;
+        }
+    }
+    &-item {
+        border-radius: 20px;
+        background-color: $dark-bg;
+        & span {
+            @include font-18;
+            color: #767982;
+        }
+        & h2 {
+            font-family: $font-1;
+            color: #E0DBDB;
+        }
+        &-wrap {
+            padding-bottom: 40%;
+            @include img(cover);
+            @include mmd {
+                padding-bottom: 100%;
+            }
+            & img,
+            & iframe {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.token {
+    @include sm {
+        justify-content: center !important;
+        text-align: center;
+    }
+    & p {
+        color: #E0DBDB;
+        font-size: 28px;
+        word-break: break-all;
+        @include lg {
+            font-size: 24px;
+        }
+        @include md {
+            font-size: 20px;
+        }
+        @include sm {
+            font-size: 17px;
+        }
+    }
+    & button {
+        border-radius: 10px;
+        padding: 25px 40px;
+        font-size: 24px;
+        @include md {
+            padding: 18px 26px;
+        }
+        @include sm {
+            padding: 12px 26px;
+            margin-top: 16px;
+        }
+    }
+}
